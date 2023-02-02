@@ -1,0 +1,52 @@
+https://www.scrapehero.com/tutorial-how-to-scrape-amazon-product-details-using-python-and-selectorlib/
+
+
+
+Packages to install for Amazon scraping
+    pip3 install requests requests selectorlib
+
+
+
+Selectorlib is a combination of tools for developers that makes marking up and extracting data from web pages easy. The Selectorlib Chrome Extension lets you mark data that you need to extract, and creates the CSS Selectors or XPaths needed to extract that data, then previews how the data would look like.
+
+The Code
+Create a folder called amazon-scraper and paste your selectorlib yaml template file as selectors.yml.
+
+Let’s create a file called amazon.py and paste the code below into it. All it does is
+
+1. Read a list of Amazon Product URLs from a file called urls.txt
+2. Scrape the data
+3. Save the data as a JSON Lines file
+
+You can start your scraper by typing the command:
+
+python3 amazon.py
+
+Once the scrape is complete you should see a file called output.jsonl with your data.
+
+Scrape Amazon products from the Search Results Page
+The Amazon search result page scraper will scrape the following details from search result page.
+
+1. Product Name
+2. Price
+3. URL
+4. Rating
+5. Number of Reviews
+The steps and code for scraping search results is very similar to the product page scraper.
+
+The Code
+The code is almost identical to the previous scraper, except that we iterate through each product and save them as a separate line.
+
+Let’s create a file searchresults.py and paste the code below into it. Here is what the code does
+
+1. Open a file called search_results_urls.txt and read search result page URLs
+2. Scrape the data
+3. Save to a JSON Lines file called search_results_output.jsonl
+
+Running the Amazon Scraper to Scrape Search Result
+You can start your scraper by typing the command:
+
+python3 searchresults.py
+
+Once the scrape is complete you should see a file called search_results_output.jsonl with your data.
+
